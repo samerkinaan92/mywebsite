@@ -1,0 +1,17 @@
+name: A workflow for my Hello World file
+on: push
+jobs:
+  build-job:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v1
+    - name: Check out code (One Line)
+      run: echo Hello World
+    - name: Check out code (Multiline Code)
+      run: |
+        echo "Line1"
+        echo "Line2"
+        echo "Below is content of first.txt"
+        cat first.txt
